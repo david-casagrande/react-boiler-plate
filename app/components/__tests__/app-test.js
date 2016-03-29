@@ -2,16 +2,13 @@ jest.unmock('../app');
 
 import App from '../app';
 import React from 'react';
-import TestUtils from 'react-addons-test-utils';
+import { shallow } from 'enzyme';
 
 describe('App', () => {
-  it('lives', () => {
-    const renderer = TestUtils.createRenderer();
-    const instance = React.createElement(App);
+  it('renders', () => {
+    const wrapper = shallow(<App />);
 
-    renderer.render(instance);
-    const output = renderer.getRenderOutput();
-
-    expect(output.props.children.length).toEqual(3);
+    const expectedItems = 3;
+    expect(wrapper.find('.item').length).toEqual(expectedItems);
   });
 });
