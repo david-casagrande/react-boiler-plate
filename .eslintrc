@@ -28,7 +28,7 @@
     "id-match": [0],
     "max-len": [2, 140],
     "newline-after-var": [0],
-    no-magic-numbers: [2, { "ignoreArrayIndexes": true, "ignore": [-1, 0, 1, 2] }],
+    "no-magic-numbers": [2, { "ignoreArrayIndexes": true, "ignore": [-1, 0, 1, 2] }],
     "template-curly-spacing": [2, "never"]
   }
 }
